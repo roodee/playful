@@ -2,7 +2,6 @@ require_relative 'multicast_connection'
 
 
 class Playful::SSDP::Listener < Playful::SSDP::MulticastConnection
-  include LogSwitch::Mixin
 
   # @return [EventMachine::Channel] Provides subscribers with notifications
   #   from devices that have come online (sent +ssdp:alive+ notifications).

@@ -1,8 +1,19 @@
-require 'log_switch'
-
+require "logger"
 
 module Playful
-  extend LogSwitch
-end
+  module Loggable
+    def logger
+      Loggable.logger
+    end
 
-Playful.log_class_name = true
+    def self.logger
+      @logger ||= Logger.new(STDOUT)
+    end
+    
+    # Add log method for backwards compatibility
+    def log(msg)
+      Loggable.logger
+      logger.info(msg)
+    end
+  end
+end

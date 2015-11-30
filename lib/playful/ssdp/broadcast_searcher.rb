@@ -10,7 +10,7 @@ require 'eventmachine'
 module Playful
   class SSDP
     class BroadcastSearcher < EventMachine::Connection
-      include LogSwitch::Mixin
+      include Loggable
       include EventMachine::Deferrable
       include Playful::SSDP::NetworkConstants
 

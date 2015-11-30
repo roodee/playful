@@ -11,8 +11,8 @@ require 'em-synchrony'
 module Playful
   class SSDP
     class MulticastConnection < EventMachine::Connection
+      include Loggable
       include Playful::SSDP::NetworkConstants
-      include LogSwitch::Mixin
 
       # @param [Fixnum] ttl The TTL value to use when opening the UDP socket
       #   required for SSDP actions.

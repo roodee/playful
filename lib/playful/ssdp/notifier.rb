@@ -3,7 +3,6 @@ require_relative 'multicast_connection'
 
 
 class Playful::SSDP::Notifier < Playful::SSDP::MulticastConnection
-  include LogSwitch::Mixin
 
   def initialize(nt, usn, ddf_url, valid_for_duration)
     @os = RbConfig::CONFIG['host_vendor'].capitalize + '/' +

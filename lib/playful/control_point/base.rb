@@ -8,8 +8,8 @@ require_relative '../../playful'
 module Playful
   class ControlPoint
     class Base
-      include LogSwitch::Mixin
-
+      include Loggable
+      
       protected
 
       def get_description(location, description_getter)

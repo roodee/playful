@@ -10,7 +10,6 @@ module Playful
   class ControlPoint
     class Device < Base
       include EM::Deferrable
-      include LogSwitch::Mixin
 
       attr_reader :ssdp_notification
 

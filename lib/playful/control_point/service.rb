@@ -55,7 +55,6 @@ module Playful
     #
     class Service < Base
       include EventMachine::Deferrable
-      include LogSwitch::Mixin
 
       #vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
       # Passed in by +service_list_info+

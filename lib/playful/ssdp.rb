@@ -32,7 +32,6 @@ module Playful
   #
   # @todo Add docs for Playful::Device perspective.
   class SSDP
-    include LogSwitch::Mixin
     include NetworkConstants
 
     # Opens a multicast UDP socket on 239.255.255.250:1900 and listens for
